@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Personal Custom Fonts */
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Extralight.otf') format('opentype');
+  font-weight: 200; /* Extra Light */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Light.otf') format('opentype');
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Regular.otf') format('opentype');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Medium.otf') format('opentype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Semibold.otf') format('opentype');
+  font-weight: 600; /* Semi Bold */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Bold.otf') format('opentype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url('/fonts/Axiforma-Regular.otf') format('opentype');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Axiforma';
+  src: url('/fonts/Axiforma-Bold.otf') format('opentype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Axiforma';
+  src: url('/fonts/Axiforma-Extrabold.otf') format('opentype');
+  font-weight: 800; /* Extrabold */
+  font-style: normal;
+}
