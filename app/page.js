@@ -5,10 +5,29 @@ import './globals.css';
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
 
 export default function page() {
-
+  const infoCards = [
+    {
+      title: "academic success",
+      info: "Excel with Clarity AI's study tips."
+    },
+    {
+      title: "easy sign-up",
+      info: "Sign up, explore in seconds."
+    },
+    {
+      title: "meet your fellows",
+      info: "Build connections, grow your network."
+    },
+    {
+      title: "artificial intelligence",
+      info: "Access university resources powered by AI."
+    },
+  ];
+  
   return (
     <>
       <section id="Hero"> 
@@ -24,11 +43,36 @@ export default function page() {
           </div>
         </BackgroundGradientAnimation>
       </section>
-      
-      <section id="Info1" className="flex justify-center items-center w-screen h-screen bg-gradient-to-b from-[#07052D] to-[#2C174C]"> 
+
+      <section id="Info1" className="flex w-screen h-screen bg-gradient-to-b from-[#07052D] to-[#2C174C]"> 
+        <div className="flex flex-col space-y-16 m-24">
+          <div className="flex flex-col space-y-5">
+            <div className="font-axiforma font-medium text-[#E8DBFF] text-7xl"> Ask, Connect, Succeed </div>
+            <div className="font-chillax font-normal text-[#E8DBFF] text-md"> Instant answers, peer connections, and personalized insights — all in one place. </div>
+          </div>
+
+          <div className="bg-transparent relative flex flex-col items-center justify-center overflow-hidden">
+            <InfiniteMovingCards
+              items={infoCards}
+              direction="right"
+              speed="slow"
+            />
+          </div>
+        </div>
       </section>
 
+      <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      <InfiniteMovingCards
+        items={infoCards}
+        direction="right"
+        speed="slow"
+      />
+    </div>
+
       <section id="Info2" className="flex justify-center items-center w-screen h-screen bg-[#CCB4FF]">    
+      </section>
+
+      <section id="About" className="flex justify-center items-center w-screen h-screen bg-gradient-to-b from-[#2C174C] to-[#07052D]">    
       </section>
     </>
 
