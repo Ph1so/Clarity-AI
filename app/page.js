@@ -24,13 +24,7 @@ export default function page() {
           </div>
         </BackgroundGradientAnimation>
       </section>
-
-
-
-
-
       
-
       <section id="Info1" className="flex justify-center items-center w-screen h-screen bg-gradient-to-b from-[#07052D] to-[#2C174C]"> 
       </section>
 
