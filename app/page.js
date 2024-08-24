@@ -83,11 +83,8 @@ export default function page() {
               speed="slow"
             />
           </div>
-
         </div>
       </section>
-
-
 
       <section id="Info2" className="flex justify-center items-center w-screen h-screen bg-[#CCB4FF]">    
       </section>
