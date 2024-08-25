@@ -19,7 +19,7 @@ export const FloatingNav = ({
       link: "#Hero", 
     },
     { name: "About Us", 
-      link: "#Profile", 
+      link: "#Info1", 
     }
   ],
 
@@ -69,10 +69,7 @@ export const FloatingNav = ({
             <Link
               key={`link=${idx}`}
               href={navItem.link}
-              className={cn(
-                "relativeitems-center flex space-x-1 font-chillax text-[#17125D]"
-              )}
-            >
+              className={cn( "relativeitems-center flex space-x-1 font-chillax text-[#17125D]" )} >
               <span className="hidden sm:block text-sm cursor-pointer">{navItem.name}</span>
             </Link>
           ))
@@ -80,10 +77,10 @@ export const FloatingNav = ({
           <p>No navigation items available</p>
         )}
         <div className="flex flex-row space-x-4">
-          <button className="border text-sm font-chillax font-medium relative border-[#17125D] text-[#17125D] px-4 py-1 rounded-full">
+          <button className="border text-sm font-chillax font-medium relative border-[#2C174B] text-[#2C174B] px-4 py-1 rounded-full">
             <span>Login</span>
           </button>
-          <button className="border text-sm font-chillax font-medium relative bg-[#17125D] text-[#E8DBFF] px-4 py-1 rounded-full">
+          <button className="border text-sm font-chillax font-medium relative bg-[#2C174B] text-[#E8DBFF] px-4 py-1 rounded-full">
             <span>Sign Up</span>
           </button>
         </div>
