@@ -59,7 +59,7 @@ export default function page() {
               <div className="font-chillax font-normal text-[#E8DBFF]"> Get Answers, Connect, and Succeed with </div>
               <div className="font-chillax font-medium text-[#E8DBFF] text-9xl drop-shadow-4xl"> Clarity AI </div>
               <div className="flex flex-row space-x-6">
-                <a href="#Info1" className="font-chillax font-medium text-[#E8DBFF] border border-[#E8DBFF] rounded-full px-6 py-2 cursor-pointer hover:-translate-y-3 duration-300 shadow-4xl shadow-[#17125D]"> Learn More </a>
+                <a href="#Chatbot" className="font-chillax font-medium text-[#E8DBFF] border border-[#E8DBFF] rounded-full px-6 py-2 cursor-pointer hover:-translate-y-3 duration-300 shadow-4xl shadow-[#17125D]"> Learn More </a>
                 <a href="" className="font-chillax font-medium text-[#2C174B] bg-[#E8DBFF] rounded-full px-6 py-2 cursor-pointer hover:-translate-y-3 duration-300 shadow-4xl shadow-[#17125D]"> Chat with Clarity </a>
               </div>
             </div>
@@ -67,11 +67,11 @@ export default function page() {
         </BackgroundGradientAnimation>
       </section>
 
-      <section id="Info1" className="flex w-screen h-screen bg-gradient-to-b from-[#2C174C] to-[#07052D]">
+      <section id="Chatbot" className="flex w-screen h-screen bg-gradient-to-b from-[#2C174C] to-[#07052D]">
         <div className="flex flex-col space-y-10 m-24">
           <div className="flex flex-col space-y-5">
-            <div className="font-axiforma font-medium text-[#E8DBFF] text-7xl"> Ask, Connect, Succeed </div>
-            <div className="font-chillax font-normal text-[#E8DBFF] text-md"> Instant answers, peer connections, and personalized insights — all in one place. </div>
+            <div className="font-axiforma font-medium text-[#E8DBFF] text-7xl"> Ask & Succeed </div>
+            <div className="font-chillax font-normal text-[#E8DBFF] text-md"> Instant answers and personalized insights — by our chatbot, all in one place. Excel with Clarity. </div>
           </div>
           <div className="bg-transparent relative flex flex-col items-center justify-center overflow-hidden">
             <InfiniteMovingCards
@@ -90,7 +90,7 @@ export default function page() {
         </div>
       </section>
 
-      <section id="Info2" className="flex w-screen h-screen bg-[#CCB4FF]">    
+      <section id="Connect" className="flex w-screen h-screen bg-[#CCB4FF]">    
         <div className="m-24">
           <div className="flex flex-col space-y-10">
             <div className="flex flex-row space-x-48"> 
@@ -112,7 +112,7 @@ export default function page() {
                 <div className="text-[#2C174B]"> It's like having a cheat code for <br/> university, minus the actual cheating. </div>
               </div>
             </div>
-            <button className="font-chillax font-medium w-44 text-[#E8DBFF] bg-[#64409D] rounded-full px-5 py-1 shadow-lg shadow-[#A781E2] border border-t-0 border-[#544072] cursor-pointer hover:-translate-y-3 duration-300"> See how it works </button>
+            <button className="font-chillax font-medium w-44 text-[#E8DBFF] bg-[#64409D] rounded-full px-5 py-1 shadow-lg shadow-[#A781E2] border border-t-0 border-[#544072] cursor-pointer hover:-translate-y-3 duration-300"> Join Network </button>
             <div className="flex flex-row space-x-9">
               
               <WobbleCard containerClassName="col-span-1 shadow-2xl shadow-[#A781E2] font-chillax font-normal">
@@ -144,7 +144,6 @@ export default function page() {
 
       <section id="About" className="flex w-screen h-screen bg-gradient-to-b from-[#2C174C] to-[#07052D]">   
         <div className="flex flex-col space-y-8">
-
           <div className="m-24 flex flex-col space-y-10">
             <div className="font-chillax font-medium text-[#E8DBFF] text-8xl"> ABOUT US </div>
             <div className="font-chillax font-light text-[#E8DBFF] text-lg leading-8">
@@ -163,8 +162,6 @@ export default function page() {
 
           <div class="border-t border-[#E8DBFF] w-screen"> </div>
           <div class="font-chillax font-light text-[#E8DBFF] text-lg m-24"> Footer Content </div>
-
-
       </div>
       </section>
     </>

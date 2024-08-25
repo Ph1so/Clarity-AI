@@ -12,14 +12,14 @@ import Link from "next/link";
 
 export const FloatingNav = ({
   navItems = [
-    { name: "Connect With Classmates", 
-      link: "#Hero", 
-    },
     { name: "Chatbot", 
-      link: "#Hero", 
+      link: "#Chatbot", 
+    },
+    { name: "Connect With Classmates", 
+      link: "#Connect", 
     },
     { name: "About Us", 
-      link: "#Info1", 
+      link: "#About", 
     }
   ],
 
