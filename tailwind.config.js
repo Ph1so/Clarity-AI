@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const flattenColorPalette = require("tailwindcss/lib/util/flattenColorPalette").default;
+
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -17,6 +19,12 @@ module.exports = {
       },
     },
     extend: {
+      boxShadow: {
+        'text-sm': '1px 1px 2px rgba(171, 135, 229, 0.5)',
+        'text-md': '2px 2px 4px rgba(171, 135, 229, 0.5)',
+        'text-lg': '3px 3px 6px rgba(171, 135, 229, 0.5)',
+        // Add more sizes as needed
+      },
       fontFamily: {
         chillax: ['Chillax', 'sans-serif'], // Custom font family 1
         axiforma: ['Axiforma', 'sans-serif'], // Custom font family 2
@@ -111,6 +119,11 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
       },
       animation: {
         first: "moveVertical 30s ease infinite",
@@ -120,8 +133,23 @@ module.exports = {
         fifth: "moveInCircle 20s ease infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    addVariablesForColors,
+  ],
 };
+
+function addVariablesForColors({ addBase, theme }) {
+  const allColors = flattenColorPalette(theme("colors"));
+  const newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
