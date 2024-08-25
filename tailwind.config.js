@@ -19,6 +19,12 @@ module.exports = {
       },
     },
     extend: {
+      boxShadow: {
+        'text-sm': '1px 1px 2px rgba(171, 135, 229, 0.5)',
+        'text-md': '2px 2px 4px rgba(171, 135, 229, 0.5)',
+        'text-lg': '3px 3px 6px rgba(171, 135, 229, 0.5)',
+        // Add more sizes as needed
+      },
       fontFamily: {
         chillax: ['Chillax', 'sans-serif'], // Custom font family 1
         axiforma: ['Axiforma', 'sans-serif'], // Custom font family 2
