@@ -20,7 +20,7 @@ module.exports = {
     },
     extend: {
       textShadow: {
-        'custom': '2px 2px 4px #AB86E5', // Define the text shadow here
+        'custom': '4px 4px 4px #000000', // Define the text shadow here
       },
       fontFamily: {
         chillax: ['Chillax', 'sans-serif'], // Custom font family 1

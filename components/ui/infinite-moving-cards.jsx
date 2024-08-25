@@ -70,17 +70,17 @@ export const InfiniteMovingCards = ({
 
         {items.map((item, idx) => (
           <li
-            className="relative bg-[#CCB4FF] bg-opacity-50 rounded-3xl p-12 w-80 h-50"
+            className="relative bg-[#64409D] bg-opacity-30 rounded-3xl p-12 w-80 h-50"
             key={item.name}>
             <blockquote>
-              <div aria-hidden="true" className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"></div>
+              <div aria-hidden="true" className="user-select-none -z-1 absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"></div>
               <div className="relative z-20 flex flex-row items-center">
                 
                 <span className="flex flex-col gap-3">
-                  <span className="text-[#ffffff] text-sm font-chillax font-normal">
+                  <span className="text-[#E8DBFF] text-sm font-chillax font-normal">
                     {item.title}
                   </span>
-                  <span className="text-[#CCB4FF] text-lg font-chillax font-medium">
+                  <span className="text-[#E8DBFF] text-md font-chillax font-medium">
                     {item.info}
                   </span>
                 </span>

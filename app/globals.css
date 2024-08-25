@@ -64,6 +64,10 @@
     background-image: radial-gradient(circle, #fefdff, #CDB6FF);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
