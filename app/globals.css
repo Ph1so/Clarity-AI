@@ -60,6 +60,10 @@
     font-style: normal;
   }
 
+  .bg-gradient-radial {
+    background-image: radial-gradient(circle, #fefdff, #CDB6FF);
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
