@@ -27,7 +27,7 @@ async function retrieveRelevantDocs(query) {
   const result = await pinecone.query({
     topK: 5,
     vector: queryEmbedding,
-    index: process.env.PINECONE_INDEX_NAME,
+    index: process.env.NEXT_PUBLIC_PINECONE_INDEX_NAME,
   });
 
   // Extract the content of the retrieved documents
