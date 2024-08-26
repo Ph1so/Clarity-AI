@@ -1,8 +1,8 @@
 "use client";
+import './globals.css'; 
 import React from "react";
 import Image from "next/image";
-import './globals.css'; 
-
+import Link from "next/link";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
@@ -10,7 +10,7 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { WobbleCard } from "@/components/ui/wobble-card";
 
 
-export default function webpage() {
+export default function Webpage() {
   const infoCards = [
     {
       title: "academic success",
@@ -60,7 +60,7 @@ export default function webpage() {
               <div className="font-chillax font-medium text-[#E8DBFF] text-9xl drop-shadow-4xl"> Clarity AI </div>
               <div className="flex flex-row space-x-6">
                 <a href="#Chatbot" className="font-chillax font-medium text-[#E8DBFF] border border-[#E8DBFF] rounded-full px-6 py-2 cursor-pointer hover:-translate-y-3 duration-300 shadow-4xl shadow-[#17125D]"> Learn More </a>
-                <a href="" className="font-chillax font-medium text-[#2C174B] bg-[#E8DBFF] rounded-full px-6 py-2 cursor-pointer hover:-translate-y-3 duration-300 shadow-4xl shadow-[#17125D]"> Chat with Clarity </a>
+                <Link href="/clarityPages/loginPage" className="font-chillax font-medium text-[#2C174B] bg-[#E8DBFF] rounded-full px-6 py-2 cursor-pointer hover:-translate-y-3 duration-300 shadow-4xl shadow-[#17125D]"> Chat with Clarity </Link>
               </div>
             </div>
           </div>
@@ -112,7 +112,9 @@ export default function webpage() {
                 <div className="text-[#2C174B]"> It's like having a cheat code for <br/> university, minus the actual cheating. </div>
               </div>
             </div>
-            <button className="font-chillax font-medium w-44 text-[#E8DBFF] bg-[#64409D] rounded-full px-5 py-1 shadow-lg shadow-[#A781E2] border border-t-0 border-[#544072] cursor-pointer hover:-translate-y-3 duration-300"> Join Network </button>
+            <Link href="/clarityPages/signupPage">
+              <button className="font-chillax font-medium w-44 text-[#E8DBFF] bg-[#64409D] rounded-full px-5 py-1 shadow-lg shadow-[#A781E2] border border-t-0 border-[#544072] cursor-pointer hover:-translate-y-3 duration-300"> Join Network </button>
+            </Link>
             <div className="flex flex-row space-x-9">
               
               <WobbleCard containerClassName="col-span-1 shadow-2xl shadow-[#A781E2] font-chillax font-normal">

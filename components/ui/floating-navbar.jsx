@@ -77,12 +77,17 @@ export const FloatingNav = ({
           <p>No navigation items available</p>
         )}
         <div className="flex flex-row space-x-4">
-          <button className="border text-sm font-chillax font-medium relative border-[#2C174B] text-[#2C174B] px-4 py-1 rounded-full">
-            <span>Login</span>
-          </button>
-          <button className="border text-sm font-chillax font-medium relative bg-[#2C174B] text-[#E8DBFF] px-4 py-1 rounded-full">
-            <span>Sign Up</span>
-          </button>
+
+          <Link href="/clarityPages/loginPage">
+            <button className="border text-sm font-chillax font-medium relative border-[#2C174B] text-[#2C174B] px-4 py-1 rounded-full">
+              <span>Login</span>
+            </button>
+          </Link>
+          <Link href="/clarityPages/loginPage">
+            <button className="border text-sm font-chillax font-medium relative bg-[#2C174B] text-[#E8DBFF] px-4 py-1 rounded-full">
+              <span>Sign Up</span>
+            </button>
+          </Link>
         </div>
       </motion.div>
     </AnimatePresence>
