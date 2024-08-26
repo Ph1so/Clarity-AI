@@ -10,7 +10,7 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { WobbleCard } from "@/components/ui/wobble-card";
 
 
-export default function page() {
+export default function webpage() {
   const infoCards = [
     {
       title: "academic success",
@@ -71,7 +71,7 @@ export default function page() {
         <div className="flex flex-col space-y-10 m-24">
           <div className="flex flex-col space-y-5">
             <div className="font-axiforma font-medium text-[#E8DBFF] text-7xl"> Ask & Succeed </div>
-            <div className="font-chillax font-normal text-[#E8DBFF] text-md"> Instant answers and personalized insights — by our chatbot, all in one place. Excel with Clarity. </div>
+            <div className="font-chillax font-normal text-[#E8DBFF] text-md"> Instant answers and personalized insights — by our chatbot, all in one place. </div>
           </div>
           <div className="bg-transparent relative flex flex-col items-center justify-center overflow-hidden">
             <InfiniteMovingCards
