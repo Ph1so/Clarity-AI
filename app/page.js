@@ -151,11 +151,12 @@ export default function Webpage() {
             <div className="font-chillax font-light text-[#E8DBFF] text-lg leading-8">
               <p> We're on a mission to make university life a whole lot easier for students like you. <br/>
                   Our journey with Clarity AI started when our team realized how much time we spend hunting for answers <br/>
-                  and trying to connect with our classmates. We thought, “Why not create an app that does it all?” And here we are! 
+                  and trying to connect with our classmates. We thought, “Why not create an app that does it all?”!
               </p>
               <br/>
               <p> Clarity AI isn't just an app - it's a tool built with students in mind, by students who've been in your shoes. <br/>
-                  We are excited to share it with you and can't wait to see how it makes your university experience smoother and more connected.
+                  We are excited to share it with you and can't wait to see how it makes your university experience smoother and more connected. <br/>
+                  P.S we are indeed a <span className="font-medium"> non-profit organization, </span> so every feature is free!
               </p>
               <br/>
               <p> - The Clarity Squad </p>
@@ -164,7 +165,7 @@ export default function Webpage() {
 
           <div class="border-t border-[#E8DBFF] w-screen"> </div>
           <div class="font-chillax font-light text-[#E8DBFF] text-lg m-24"> Footer Content </div>
-      </div>
+        </div>
       </section>
     </>
   );

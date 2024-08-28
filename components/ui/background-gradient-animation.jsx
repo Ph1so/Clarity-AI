@@ -6,12 +6,12 @@ export const BackgroundGradientAnimation = ({
   gradientBackgroundStart = "rgb(44, 23, 76)",
   gradientBackgroundEnd = "rgb(7, 5, 45)",
   firstColor = "137, 84, 221",
-  secondColor = "167, 129, 226",
-  thirdColor = "217, 197, 224",
+  secondColor = "200, 150, 255",
+  thirdColor = "230, 210, 250",
   fourthColor = "70, 85, 150",
   fifthColor = "55, 17, 111",
-  pointerColor = "169, 180, 154",
-  size = "90%",
+  pointerColor = "167, 129, 226",
+  size = "80%",
   blendingValue = "hard-light",
   children,
   className,
@@ -109,7 +109,7 @@ export const BackgroundGradientAnimation = ({
             `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
             `[transform-origin:center_center]`,
             `animate-first`,
-            `opacity-100`
+            `opacity-70`
           )}
         ></div>
         <div
@@ -127,7 +127,7 @@ export const BackgroundGradientAnimation = ({
             `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
             `[transform-origin:calc(50%+400px)]`,
             `animate-third`,
-            `opacity-100`
+            `opacity-75`
           )}
         ></div>
         <div
@@ -136,7 +136,7 @@ export const BackgroundGradientAnimation = ({
             `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
             `[transform-origin:calc(50%-200px)]`,
             `animate-fourth`,
-            `opacity-70`
+            `opacity-80`
           )}
         ></div>
         <div
