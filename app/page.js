@@ -49,15 +49,13 @@ export default function Webpage() {
     },
   ];
 
-  // Separate refs for different sections
   const chatbotRef = useRef(null);
   const connectRef = useRef(null);
 
-  // Use useInView for each ref independently
   const isChatbotInView = useInView(chatbotRef, { once: true });
   const isConnectInView = useInView(connectRef, { once: true });
 
-  // Variants for animations
+  // animation functions
   const slideFromLeft = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0 },
@@ -76,11 +74,11 @@ export default function Webpage() {
 
   const shake = {
     visible: {
-      rotate: [0, -2, 2, -2, 2, 0], // Keyframes for rotating effect
+      rotate: [0, -2, 2, -2, 2, 0], // keyframes
       transition: {
         delay: 2.1,
-        duration: 0.8,  // Total duration of the shake animation
-        ease: "easeInOut", // Easing function for smooth start and stop
+        duration: 0.8, 
+        ease: "easeInOut"
       },
     },
   };
