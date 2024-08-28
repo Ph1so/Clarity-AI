@@ -1,9 +1,10 @@
 "use client";
 import './globals.css'; 
-import React from "react";
+import React, {useRef} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+import { motion, useInView } from 'framer-motion';
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
@@ -47,7 +48,44 @@ export default function Webpage() {
       info: "Ask our chatbot anything—from where to eat to how to ace that test."
     },
   ];
-  
+
+  // Separate refs for different sections
+  const chatbotRef = useRef(null);
+  const connectRef = useRef(null);
+
+  // Use useInView for each ref independently
+  const isChatbotInView = useInView(chatbotRef, { once: true });
+  const isConnectInView = useInView(connectRef, { once: true });
+
+  // Variants for animations
+  const slideFromLeft = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const slideFromRight = {
+    hidden: { opacity: 0, x: 100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const fadeZoomInOut = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 }, 
+    exit: { opacity: 0, scale: 0.8 }, 
+  };
+
+  const shake = {
+    visible: {
+      rotate: [0, -2, 2, -2, 2, 0], // Keyframes for rotating effect
+      transition: {
+        delay: 2.1,
+        duration: 0.8,  // Total duration of the shake animation
+        ease: "easeInOut", // Easing function for smooth start and stop
+      },
+    },
+  };
+
+
   return (
     <>
       <section id="Hero"> 
@@ -69,24 +107,41 @@ export default function Webpage() {
 
       <section id="Chatbot" className="flex w-screen h-screen bg-gradient-to-b from-[#2C174C] to-[#07052D]">
         <div className="flex flex-col space-y-10 m-24">
-          <div className="flex flex-col space-y-5">
+          
+          <motion.div
+            className="flex flex-col space-y-5">
             <div className="font-axiforma font-medium text-[#E8DBFF] text-7xl"> Ask & Succeed </div>
             <div className="font-chillax font-normal text-[#E8DBFF] text-md"> Instant answers and personalized insights — by our chatbot, all in one place. </div>
-          </div>
-          <div className="bg-transparent relative flex flex-col items-center justify-center overflow-hidden">
+          </motion.div>
+
+          <motion.div 
+            ref={chatbotRef}
+            initial="hidden"
+            animate={isChatbotInView ? "visible" : "hidden"}
+            variants={slideFromLeft}
+            transition={{ duration: 1.2 }}
+            className="bg-transparent relative flex flex-col items-center justify-center overflow-hidden">
             <InfiniteMovingCards
               items={infoCards}
               direction="right"
               speed="slow"
             />
-          </div>
-          <div className="bg-transparent relative flex flex-col items-center justify-center overflow-hidden">
+          </motion.div>
+
+          <motion.div 
+            ref={chatbotRef}
+            initial="hidden"
+            animate={isChatbotInView ? "visible" : "hidden"}
+            variants={slideFromRight}
+            transition={{ duration: 1.2 }}
+            className="bg-transparent relative flex flex-col items-center justify-center overflow-hidden">
             <InfiniteMovingCards
               items={infoCards2}
               direction="left"
               speed="slow"
             />
-          </div>
+          </motion.div>
+
         </div>
       </section>
 
@@ -94,11 +149,36 @@ export default function Webpage() {
         <div className="m-24">
           <div className="flex flex-col space-y-10">
             <div className="flex flex-row space-x-48"> 
+              
               <div className="flex flex-col space-y-11 font-axiforma font-bold text-[#E8DBFF] text-7xl"> 
-                <div className="text-shadow-custom">Your</div> 
-                <div className="text-shadow-custom">Ultimate</div>
-                <div className="text-shadow-custom">Campus Companion</div>
+                <motion.div 
+                  ref={connectRef}
+                  initial="hidden"
+                  animate={isConnectInView ? "visible" : "hidden"}
+                  variants={fadeZoomInOut}
+                  transition={{ delay: 0.2, duration: 0.6 }}
+                  className="text-shadow-custom">Your
+                </motion.div> 
+                
+                <motion.div 
+                  ref={connectRef}
+                  initial="hidden"
+                  animate={isConnectInView ? "visible" : "hidden"}
+                  variants={fadeZoomInOut}
+                  transition={{ delay: 0.8, duration: 0.6 }}
+                  className="text-shadow-custom">Ultimate
+                </motion.div>
+                
+                <motion.div 
+                  ref={connectRef}
+                  initial="hidden"
+                  variants={fadeZoomInOut}
+                  animate={isConnectInView ? "visible" : "hidden"}
+                  transition={{ delay: 1.4, duration: 0.6 }}
+                  className="text-shadow-custom">Campus Companion
+                </motion.div>
               </div>
+              
               <div className="font-chillax font-normal text-md text-right leading-7"> 
                 <div className="mb-6 text-[#2C174B] font-normal"> Clarity AI is like that one friend who always <br/> knows what's up. </div>
                 <div className="text-[#2C174B]"> 
@@ -115,8 +195,14 @@ export default function Webpage() {
             <Link href="/clarityPages/signupPage">
               <button className="font-chillax font-medium w-44 text-[#E8DBFF] bg-[#64409D] rounded-full px-5 py-1 shadow-lg shadow-[#A781E2] border border-t-0 border-[#544072] cursor-pointer hover:-translate-y-3 duration-300"> Join Network </button>
             </Link>
-            <div className="flex flex-row space-x-9">
-              
+
+            <motion.div 
+              ref={connectRef}
+              initial="hidden"
+              variants={shake}
+              animate={isConnectInView ? "visible" : "hidden"}
+              className="flex flex-row space-x-9">
+
               <WobbleCard containerClassName="col-span-1 shadow-2xl shadow-[#A781E2] font-chillax font-normal">
                 <div className="text-left text-balance font-semibold tracking-[-0.015em] text-[#2C174B] text-xl"> Connect for Advice </div>
                 <p className="mt-4 text-left text-[#2C174B] text-normal"> 
@@ -137,8 +223,8 @@ export default function Webpage() {
                   Grow your circle by connecting with classmates who share your courses and major. Discover new friends and build your network!                
                 </p>
               </WobbleCard>
+            </motion.div>
 
-            </div>
           </div>
         </div>
       </section>
@@ -147,15 +233,16 @@ export default function Webpage() {
       <section id="About" className="flex w-screen h-screen bg-gradient-to-b from-[#2C174C] to-[#07052D]">   
         <div className="flex flex-col space-y-8">
           <div className="m-24 flex flex-col space-y-10">
-            <div className="font-chillax font-medium text-[#E8DBFF] text-8xl"> ABOUT US </div>
+            <div className="font-chillax font-normal text-[#E8DBFF] text-8xl"> ABOUT US </div>
             <div className="font-chillax font-light text-[#E8DBFF] text-lg leading-8">
               <p> We're on a mission to make university life a whole lot easier for students like you. <br/>
                   Our journey with Clarity AI started when our team realized how much time we spend hunting for answers <br/>
-                  and trying to connect with our classmates. We thought, “Why not create an app that does it all?” And here we are! 
+                  and trying to connect with our classmates. We thought, “Why not create an app that does it all?”!
               </p>
               <br/>
               <p> Clarity AI isn't just an app - it's a tool built with students in mind, by students who've been in your shoes. <br/>
-                  We are excited to share it with you and can't wait to see how it makes your university experience smoother and more connected.
+                  We are excited to share it with you and can't wait to see how it makes your university experience smoother and more connected. <br/>
+                  P.S we are indeed a <span className="font-medium"> non-profit organization, </span> so every feature is free!
               </p>
               <br/>
               <p> - The Clarity Squad </p>
@@ -164,7 +251,7 @@ export default function Webpage() {
 
           <div class="border-t border-[#E8DBFF] w-screen"> </div>
           <div class="font-chillax font-light text-[#E8DBFF] text-lg m-24"> Footer Content </div>
-      </div>
+        </div>
       </section>
     </>
   );
