@@ -66,7 +66,7 @@ export const DesktopSidebar = ({
         className
       )}
       animate={{
-        width: animate ? (open ? "300px" : "60px") : "300px",
+        width: animate ? (open ? "300px" : "80px") : "300px",
       }}
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
@@ -129,7 +129,7 @@ export const SidebarLink = ({
   return (
     (<Link
       href={link.href}
-      className={cn("flex items-center justify-start gap-5 group/sidebar py-3", className)}
+      className={cn("flex items-center justify-start gap-2 group/sidebar py-1", className)}
       {...props}>
       {link.icon}
       <motion.span
@@ -137,7 +137,7 @@ export const SidebarLink = ({
           display: animate ? (open ? "inline-block" : "none") : "inline-block",
           opacity: animate ? (open ? 1 : 0) : 1,
         }}
-        className="font-chillax font-medium text-[#EACAFF] text-md group-hover/sidebar:translate-x-4 transition duration-200 whitespace-pre inline-block !p-0 !m-0">
+        className="font-chillax font-medium text-[#2C174B] text-md group-hover/sidebar:translate-x-4 transition duration-200 whitespace-pre inline-block !p-0 !m-0">
         {link.label}
       </motion.span>
     </Link>)
