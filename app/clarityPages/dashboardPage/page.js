@@ -81,18 +81,17 @@ export default function sidebar() {
   // Dummy dashboard component with content
   const Dashboard = () => {
     return ((
-      <section id="bentoGrid" className="flex h-screen w-screen">
-        <div className="grid grid-cols-7 grid-rows-25 h-full w-full gap-6"> 
+      <section id="bentoGrid" className="flex h-ful w-full justify-center items-center p-14">
+        <div className="grid h-full w-full grid-cols-9 grid-rows-21 gap-7"> 
 
-          <div id="welcomeBar" className="col-span-7 row-span-1 rounded-xl bg-white ">  </div>
+          <div id="welcomeBar" className="col-span-9 row-span-1 bg-purple-400 rounded-xl flex justify-center items-center">  </div>
 
-          <div id="chatWithClarity" className="col-span-3 row-span-4 rounded-2xl bg-white ">  </div>
-          <div id="viewMessages" className="col-span-2 row-span-4 rounded-2xl bg-white ">  </div>
-          <div id="viewProfile" className="col-span-2 rounded-2xl bg-blue-500 ">  </div>
+          <div id="chatWithClarity" className="col-span-4 row-span-5 bg-purple-400 rounded-2xl flex justify-center items-center">  </div>
+          <div id="viewMessages" className="col-span-2 row-span-5 bg-purple-400 rounded-2xl flex justify-center items-center">  </div>
+          <div id="searchArea" className="col-span-3 row-span-10 bg-purple-400 rounded-2xl flex justify-center items-center">  </div>
 
-          <div id="chatWithClarity" className="col-span-3 row-span-4 rounded-2xl bg-white ">  </div>
-          <div id="viewMessages" className="col-span-2 row-span-4 rounded-2xl bg-white ">  </div>
-          <div id="viewProfile" className="col-span-2 row-span-4 rounded-2xl bg-blue-500 ">  </div>
+          <div id="viewProfile" className="col-span-2 row-span-5 bg-purple-400 rounded-2xl flex justify-center items-center">  </div>
+          <div id="viewMessages" className="col-span-4 row-span-5 bg-purple-400 rounded-2xl flex justify-center items-center">  </div>
 
         </div>
       </section>
