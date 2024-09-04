@@ -38,7 +38,7 @@ export default function sidebar() {
     return (
       (<div className = {cn( "flex flex-col md:flex-row bg-gradient-to-b from-[#2D174C] to-[#06052C] w-full flex-1 overflow-hidden", "h-screen" )}>
         <Sidebar open={open} setOpen={setOpen} className="">
-          <SidebarBody className="justify-between gap-10 bg-[#EACAFF] opacity-100">
+          <SidebarBody className="justify-between gap-10 bg-[#EACAFF] opacity-75">
             <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
               {open ? <Logo /> : <LogoIcon />}
               <div className="mt-8 flex flex-col gap-1">
@@ -78,10 +78,12 @@ export default function sidebar() {
     );
   };
   
-  // Dummy dashboard component with content
+  // dashboard component with content
   const Dashboard = () => {
     return ((
-      <div className="m-16 text-white"> Hi World </div>
+      <section id="bentoGrid" className="flex h-screen w-screen">
+        hii
+      </section>
     ));
   };
   

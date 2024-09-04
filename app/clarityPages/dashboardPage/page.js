@@ -81,7 +81,21 @@ export default function sidebar() {
   // Dummy dashboard component with content
   const Dashboard = () => {
     return ((
-      <div className="m-16 text-white"> Hi World </div>
+      <section id="bentoGrid" className="flex h-screen w-screen">
+        <div className="grid grid-cols-7 grid-rows-25 h-full w-full gap-6"> 
+
+          <div id="welcomeBar" className="col-span-7 row-span-1 rounded-xl bg-white ">  </div>
+
+          <div id="chatWithClarity" className="col-span-3 row-span-4 rounded-2xl bg-white ">  </div>
+          <div id="viewMessages" className="col-span-2 row-span-4 rounded-2xl bg-white ">  </div>
+          <div id="viewProfile" className="col-span-2 rounded-2xl bg-blue-500 ">  </div>
+
+          <div id="chatWithClarity" className="col-span-3 row-span-4 rounded-2xl bg-white ">  </div>
+          <div id="viewMessages" className="col-span-2 row-span-4 rounded-2xl bg-white ">  </div>
+          <div id="viewProfile" className="col-span-2 row-span-4 rounded-2xl bg-blue-500 ">  </div>
+
+        </div>
+      </section>
     ));
   };
   
