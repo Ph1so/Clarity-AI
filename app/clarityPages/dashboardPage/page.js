@@ -27,7 +27,7 @@ export default function sidebar() {
         ),
       },
       {
-        label: "Settings",
+        label: "Profile Settings",
         href: "/clarityPages/personalProfilePage",
         icon: (
           <IconSettings className="text-[#EACAFF] ml-2 h-7 w-7 flex-shrink-0" />
