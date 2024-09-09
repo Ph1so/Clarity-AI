@@ -4,6 +4,7 @@ import React, {useRef} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+import { FaInstagram, FaLinkedin, FaDiscord } from 'react-icons/fa';
 import { motion, useInView } from 'framer-motion';
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
@@ -143,7 +144,7 @@ export default function Webpage() {
         </div>
       </section>
 
-      <section id="Connect" className="flex w-screen h-screen bg-[#CCB4FF]">    
+      <section id="Connect" className="flex w-screen h-screen bg-gradient-to-b from-[#07052D] to-[#2C174C]">    
         <div className="m-24">
           <div className="flex flex-col space-y-10">
             <div className="flex flex-row space-x-48"> 
@@ -155,7 +156,7 @@ export default function Webpage() {
                   animate={isConnectInView ? "visible" : "hidden"}
                   variants={fadeZoomInOut}
                   transition={{ delay: 0.2, duration: 0.6 }}
-                  className="text-shadow-custom">Your
+                  className="">Your
                 </motion.div> 
                 
                 <motion.div 
@@ -164,7 +165,7 @@ export default function Webpage() {
                   animate={isConnectInView ? "visible" : "hidden"}
                   variants={fadeZoomInOut}
                   transition={{ delay: 0.8, duration: 0.6 }}
-                  className="text-shadow-custom">Ultimate
+                  className="">Ultimate
                 </motion.div>
                 
                 <motion.div 
@@ -173,25 +174,25 @@ export default function Webpage() {
                   variants={fadeZoomInOut}
                   animate={isConnectInView ? "visible" : "hidden"}
                   transition={{ delay: 1.4, duration: 0.6 }}
-                  className="text-shadow-custom">Campus Companion
+                  className="">Campus Companion
                 </motion.div>
               </div>
               
               <div className="font-chillax font-normal text-md text-right leading-7"> 
-                <div className="mb-6 text-[#2C174B] font-normal"> Clarity AI is like that one friend who always <br/> knows what's up. </div>
-                <div className="text-[#2C174B]"> 
+                <div className="mb-6 text-[#E8DBFF] font-normal"> Clarity AI is like that one friend who always <br/> knows what's up. </div>
+                <div className="text-[#E8DBFF]"> 
                   <div className="font-semibold"> Need quick answers? </div> 
                   <div className="mb-6"> We've got you. </div> 
                 </div>
-                <div className="text-[#2C174B]"> 
+                <div className="text-[#E8DBFF]"> 
                   <div className="font-semibold"> Want to connect with classmates? </div> 
                   <div className="mb-6"> We've got that too. </div> 
                 </div>
-                <div className="text-[#2C174B]"> It's like having a cheat code for <br/> university, minus the actual cheating. </div>
+                <div className="text-[#E8DBFF]"> It's like having a cheat code for <br/> university, minus the actual cheating. </div>
               </div>
             </div>
             <Link href="/clarityPages/signupPage">
-              <button className="font-chillax font-medium w-44 text-[#E8DBFF] bg-[#64409D] rounded-full px-5 py-1 shadow-lg shadow-[#A781E2] border border-t-0 border-[#544072] cursor-pointer hover:-translate-y-3 duration-300"> Join Network </button>
+              <button className="font-chillax font-medium w-44 text-[#07052D] bg-[#E8DBFF] rounded-full px-5 py-1 border border-t-0 border-[#544072] cursor-pointer hover:-translate-y-3 duration-300"> Join Network </button>
             </Link>
 
             <motion.div 
@@ -231,7 +232,7 @@ export default function Webpage() {
       <section id="About" className="flex w-screen h-screen bg-gradient-to-b from-[#2C174C] to-[#07052D]">   
         <div className="flex flex-col space-y-8">
           <div className="m-24 flex flex-col space-y-10">
-            <div className="font-chillax font-normal text-[#E8DBFF] text-8xl"> ABOUT US </div>
+            <div className="font-chillax font-medium text-[#E8DBFF] text-7xl"> ABOUT US </div>
             <div className="font-chillax font-light text-[#E8DBFF] text-lg leading-8">
               <p> We're on a mission to make university life a whole lot easier for students like you. <br/>
                   Our journey with Clarity AI started when our team realized how much time we spend hunting for answers <br/>
@@ -248,7 +249,39 @@ export default function Webpage() {
           </div> 
 
           <div class="border-t border-[#E8DBFF] w-screen"> </div>
-          <div class="font-chillax font-light text-[#E8DBFF] text-lg m-24"> Footer Content </div>
+          <div class="font-chillax font-light text-[#E8DBFF] text-lg m-24">
+              <div className="flex flex-col space-y-4 justify-center items-center">
+                <div className="font-normal text-left"> Clarity AI Socials </div>
+                <motion.div className="flex flex-row space-x-8 text-left cursor-pointer"> 
+                  <div className="flex flex-row space-x-3">
+                    <a href="https://www.linkedin.com/in/clarity-ai-016563327/" target="_blank" rel="noopener noreferrer"> 
+                      <FaLinkedin href="" className="text-2xl hover:-translate-y-2 duration-300"></FaLinkedin>
+                    </a>
+                    <a href="https://www.linkedin.com/in/clarity-ai-016563327/" target="_blank" rel="noopener noreferrer"> 
+                      <div className="font-chillax text-left">LinkedIn</div>
+                    </a>
+                  </div>
+
+                  <div className="flex flex-row space-x-3">
+                    <a href="" target="_blank" rel="noopener noreferrer"> 
+                      <FaDiscord href="" className="text-2xl hover:-translate-y-2 duration-300"></FaDiscord>
+                    </a>
+                    <a href="https://www.linkedin.com/in/clarity-ai-016563327/" target="_blank" rel="noopener noreferrer"> 
+                      <div className="font-chillax text-left">Discord</div>
+                    </a>
+                  </div>
+                  
+                  <div className="flex flex-row space-x-3">
+                    <a href="https://www.instagram.com/clarity_ai/?hl=en" target="_blank" rel="noopener noreferrer">
+                      <FaInstagram className="text-2xl hover:-translate-y-2 duration-300" />
+                    </a>  
+                    <a href="https://www.linkedin.com/in/clarity-ai-016563327/" target="_blank" rel="noopener noreferrer"> 
+                      <div className="font-chillax text-left">Instagram</div>   
+                    </a>
+                  </div>           
+                </motion.div>
+              </div>
+          </div>
         </div>
       </section>
     </>
